@@ -14,7 +14,7 @@ class Peserta extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'kode' => [
+            'kode_peserta' => [
                 'type' => 'VARCHAR',
                 'constraint' => 6,
                 'null' => FALSE
@@ -111,7 +111,7 @@ class Peserta extends Migration
             ]
         ]);
         $this->forge->addKey('id', TRUE);
-        $this->forge->addKey('kode', TRUE);
+        $this->forge->addKey('kode_peserta', TRUE);
         $this->forge->createTable('peserta');
 
     }
