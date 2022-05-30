@@ -14,8 +14,9 @@ class Parade extends Migration
                 'unsigned' => TRUE,
                 'auto_increment' => TRUE
             ],
-            'id_peserta' => [
-                'type' => 'INT',
+            'kode_peserta' => [
+                'type' => 'varchar',
+                'constraint' => 6,
                 'null' => FALSE
             ],
             'tinggi_badan' => [
@@ -64,7 +65,6 @@ class Parade extends Migration
             ]
         ]);
         $this->forge->addKey('id',TRUE);
-        $this->forge->addForeignKey('id', 'peserta', 'id');
         $this->forge->createTable('parade');
     }
 

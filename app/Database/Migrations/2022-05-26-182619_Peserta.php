@@ -111,6 +111,7 @@ class Peserta extends Migration
             ]
         ]);
         $this->forge->addKey('id', TRUE);
+        $this->forge->addKey('kode', TRUE);
         $this->forge->createTable('peserta');
 
     }
